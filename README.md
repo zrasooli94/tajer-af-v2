@@ -159,8 +159,8 @@ Log in as **admin** to access the `/admin` dashboard.
 ---
 
 ## 📁 Project Structure
-
-"tajer-af-v2/
+```
+tajer-af-v2/
 ├── app/
 │   ├── Http/
 │   │   ├── Controllers/
@@ -192,8 +192,8 @@ Log in as **admin** to access the `/admin` dashboard.
 │       └── layout.blade.php     # Master layout
 └── routes/
 ├── web.php                  # All application routes
-└── auth.php                 # Breeze auth routes"
-
+└── auth.php                 # Breeze auth routes
+```
 ---
 
 ## 🎨 Design System
