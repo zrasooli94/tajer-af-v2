@@ -1,58 +1,255 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛍️ Tajer.af v2
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **A modern full-stack e-commerce platform for authentic Afghan products — built with Laravel 11, MySQL, and Tailwind CSS.**
 
-## About Laravel
+This is the modern rebuild of [Tajer.af](https://www.facebook.com/Tajer.af/), my original e-commerce platform that I founded and ran in Kabul, Afghanistan from 2017 to 2022 before displacement. This v2 reconstruction demonstrates my full-stack engineering capabilities using a current technology stack.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Alpine.js](https://img.shields.io/badge/Alpine.js-3.x-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=white)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📸 Screenshots
 
-## Learning Laravel
+### 🏠 Homepage
+![Homepage](docs/screenshots/01-homepage.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🛍️ Product Catalog
+![Products](docs/screenshots/02-products.png)
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 📦 Product Detail Page
+![Product Detail](docs/screenshots/03-product-detail.png)
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### 🛒 Shopping Cart
+![Cart](docs/screenshots/04-cart.png)
 
-## Agentic Development
+### 📊 Admin Dashboard
+![Admin Dashboard](docs/screenshots/05-admin-dashboard.png)
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### 🛠️ Admin Product Management
+![Admin Products](docs/screenshots/06-admin-products.png)
 
+---
+
+## ✨ Features
+
+### Customer-Facing
+- 🏠 **Beautiful storefront** with hero, categories, and featured products
+- 🔍 **Product search and filtering** by category and keyword
+- 📦 **Product detail pages** with stock indicators, related products, and rich descriptions
+- 🛒 **Persistent shopping cart** with quantity updates and live total calculation
+- 💳 **Multi-step checkout** with shipping address and order confirmation
+- 🔐 **User registration and authentication** powered by Laravel Breeze
+- 📱 **Fully responsive design** that works on mobile, tablet, and desktop
+
+### Admin Panel
+- 🔒 **Role-based access control** — only admin users can access /admin
+- 📊 **Dashboard with KPIs** — revenue, orders, customers, low-stock alerts
+- 🛍️ **Full product CRUD** — create, read, update, delete products with category assignment
+- 📦 **Order management** — view, filter by status, update order status
+- 📈 **Recent orders feed** and low-stock product alerts on dashboard
+- 👤 **Customer overview** linked to orders
+
+### Technical
+- ⚡ **Laravel 11** modern framework architecture
+- 🗄️ **Eloquent ORM** with proper relationships (Products ↔ Categories, Users ↔ Orders)
+- 🔐 **Session-based authentication** with secure password hashing
+- 🎨 **Tailwind CSS 3** custom design system with brand colors
+- 🚀 **Vite** for lightning-fast asset bundling
+- 💾 **MySQL 8** with proper foreign keys, cascade deletes, and indexed slugs
+- 🌱 **Database seeders** for instant demo data (30 products, 6 categories, 2 users)
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Backend** | PHP 8.4, Laravel 11 |
+| **Frontend** | Blade templates, Tailwind CSS 3, Alpine.js |
+| **Database** | MySQL 8 |
+| **Auth** | Laravel Breeze |
+| **Asset Bundling** | Vite |
+| **Version Control** | Git + GitHub |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+You'll need these installed:
+- PHP 8.4+
+- Composer 2.x
+- Node.js 20+
+- MySQL 8+
+
+### Installation
+
+1. **Clone the repository**
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+   git clone https://github.com/zrasooli94/tajer-af-v2.git
+   cd tajer-af-v2
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+2. **Install PHP dependencies**
+```bash
+   composer install
+```
 
-## Contributing
+3. **Install Node dependencies**
+```bash
+   npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Set up environment**
+```bash
+   cp .env.example .env
+   php artisan key:generate
+```
 
-## Code of Conduct
+5. **Configure your database** in `.env`
+```env
+   DB_DATABASE=tajer_af_v2
+   DB_USERNAME=root
+   DB_PASSWORD=your_password
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. **Run migrations and seeders**
+```bash
+   php artisan migrate
+   php artisan db:seed
+```
 
-## Security Vulnerabilities
+7. **Build frontend assets**
+```bash
+   npm run build
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+8. **Start the development server**
+```bash
+   php artisan serve
+```
 
-## License
+9. **In a second terminal, start the Vite dev server** (for hot reload during development)
+```bash
+   npm run dev
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+10. **Open in browser**
+
+http://localhost:8000
+
+---
+
+## 👤 Demo Accounts
+
+After running seeders, two demo accounts are available:
+
+| Role | Email | Password |
+|---|---|---|
+| 👑 Admin | `admin@tajer.af` | `admin123` |
+| 👤 Customer | `demo@tajer.af` | `demo123` |
+
+Log in as **admin** to access the `/admin` dashboard.
+
+---
+
+## 📁 Project Structure
+
+tajer-af-v2/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/           # Admin panel controllers
+│   │   │   ├── Auth/            # Authentication (Breeze)
+│   │   │   ├── CartController.php
+│   │   │   ├── CategoryController.php
+│   │   │   ├── CheckoutController.php
+│   │   │   ├── HomeController.php
+│   │   │   └── ProductController.php
+│   │   └── Middleware/
+│   │       └── AdminMiddleware.php
+│   └── Models/
+│       ├── Category.php
+│       ├── Product.php
+│       ├── CartItem.php
+│       ├── Order.php
+│       └── User.php
+├── database/
+│   ├── migrations/              # Schema definitions
+│   └── seeders/                 # Demo data
+├── resources/
+│   ├── css/app.css              # Tailwind + custom styles
+│   └── views/
+│       ├── admin/               # Admin panel views
+│       ├── auth/                # Login, register
+│       ├── cart/, checkout/     # Shopping flow
+│       ├── products/, categories/  # Public storefront
+│       └── layout.blade.php     # Master layout
+└── routes/
+├── web.php                  # All application routes
+└── auth.php                 # Breeze auth routes
+
+---
+
+## 🎨 Design System
+
+Custom Tailwind brand colors:
+
+| Token | Hex | Purpose |
+|---|---|---|
+| `tajer-green` | `#0d7c43` | Primary brand color |
+| `tajer-red` | `#c1272d` | Alerts, sale tags |
+| `tajer-gold` | `#d4a017` | Admin badge, featured items |
+| `tajer-cream` | `#faf6f0` | Soft background |
+
+---
+
+## 🗺️ Roadmap
+
+Future enhancements I'd like to add:
+
+- [ ] Stripe payment integration (currently demo checkout only)
+- [ ] Product image uploads (Cloudinary integration)
+- [ ] Bilingual UI (English + Dari)
+- [ ] Email order confirmations (Mailgun)
+- [ ] Persistent cart across logout/login
+- [ ] Product reviews and ratings
+- [ ] Wishlist functionality
+- [ ] Admin sales analytics with charts
+
+---
+
+## 📖 About the Original Tajer.af
+
+The original Tajer.af was one of Afghanistan's early e-commerce platforms, founded in Kabul in 2017 and operated until 2022. The platform served Afghan businesses and consumers with product listings, order management, and digital payments — built solo using PHP (Laravel), MySQL, and JavaScript. Following displacement from Afghanistan in 2022, the platform was abandoned.
+
+This v2 reconstruction was built in 2026 as a portfolio project to demonstrate modern full-stack engineering capabilities and to honor the original work. While the visual design and feature set have been significantly modernized, the core mission — making Afghan craftsmanship accessible worldwide — remains.
+
+---
+
+## 👨‍💻 About the Developer
+
+**Zaker Hussain Rasooli** — Full-Stack Developer with 8+ years of experience building web applications, currently pursuing a Master of Artificial Intelligence at Asia Pacific University, Malaysia.
+
+- 🌐 [LinkedIn](https://www.linkedin.com/in/zaker-rasooli94/)
+- 🐙 [GitHub](https://github.com/zrasooli94)
+- 📍 Kuala Lumpur, Malaysia (open to relocation to Australia)
+
+I'm currently seeking **Full-Stack Developer** and **Software Engineer** roles in Australia, particularly through the Skilled Refugee Labour Agreement Pilot via Talent Beyond Boundaries.
+
+---
+
+## 📄 License
+
+This project is open source under the [MIT License](LICENSE).
+
+---
+
+<p align="center">
+  Built with ❤️ by <a href="https://github.com/zrasooli94">Zaker Hussain Rasooli</a> · Rebuilt from displacement, with a vision for the future.
+</p>
