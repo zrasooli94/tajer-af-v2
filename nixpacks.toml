@@ -16,4 +16,4 @@ cmds = [
 ]
 
 [start]
-cmd = 'php artisan migrate --force --no-interaction && php artisan db:seed --force --no-interaction > /dev/null 2>&1; php -S 0.0.0.0:$PORT -t public'
+cmd = 'php artisan config:clear && php artisan cache:clear && php artisan view:clear && php artisan route:clear && php artisan migrate --force --no-interaction && php artisan db:seed --force --no-interaction > /dev/null 2>&1; php artisan config:cache && php -S 0.0.0.0:$PORT -t public'
