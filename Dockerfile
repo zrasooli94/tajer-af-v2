@@ -70,13 +70,14 @@ ENV APP_RUNTIME="frankenphp"
 EXPOSE 8000
 
 # Start command: run migrations, seed if empty, then start FrankenPHP
-CMD php artisan config:clear && \
-    php artisan cache:clear && \
-    php artisan view:clear && \
-    php artisan route:clear && \
-    php artisan migrate --force --no-interaction || true && \
-    php artisan db:seed --force --no-interaction 2>/dev/null || true && \
+CMD sh -c "\
+    php artisan config:clear || true && \
+    php artisan cache:clear || true && \
+    php artisan view:clear || true && \
+    php artisan route:clear || true && \
+    php artisan migrate --force --no-interaction && \
+    php artisan db:seed --force --no-interaction 2>&1 || true && \
     php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache && \
-    frankenphp run --config /etc/Caddyfile
+    frankenphp run --config /app/Caddyfile"
