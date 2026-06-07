@@ -1,12 +1,31 @@
 {
+    # Disable HTTPS — Railway handles SSL termination
     auto_https off
+    
+    # Enable FrankenPHP
     frankenphp
+    
+    # Order php_server before file_server so PHP files are processed
     order php_server before file_server
 }
 
+# Listen on the port Railway provides via $PORT env var (default 8000)
 :{$PORT:8000} {
+    # Document root for Laravel
     root * /app/public
+    
+    # Compress responses
     encode zstd br gzip
+    
+    # Handle PHP via FrankenPHP
     php_server
+    
+    # Serve static files
     file_server
+    
+    # Log all requests
+    log {
+        output stdout
+        format console
+    }
 }
