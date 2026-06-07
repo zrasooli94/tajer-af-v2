@@ -1,0 +1,16 @@
+[phases.setup]
+nixPkgs = ['nodejs_20', 'php84', 'php84Packages.composer']
+
+[phases.install]
+cmds = [
+    'composer install --no-dev --optimize-autoloader --no-interaction'
+]
+
+[phases.build]
+cmds = [
+    'npm ci',
+    'npm run build'
+]
+
+[start]
+cmd = 'php artisan migrate --force --no-interaction 2>/dev/null; php artisan db:seed --force --no-interaction 2>/dev/null; php artisan optimize:clear; php -d output_buffering=4096 -d zlib.output_compression=Off -S 0.0.0.0:$PORT -t public public/index.php'
