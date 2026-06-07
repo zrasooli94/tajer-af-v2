@@ -1,5 +1,9 @@
 # 🛍️ Tajer.af v2
 
+> 🌐 **Live Demo:** [tajer-af-v2-production.up.railway.app](https://tajer-af-v2-production.up.railway.app)
+> 
+> Try with `admin@tajer.af` / `admin123` for admin panel access.
+
 > **A modern full-stack e-commerce platform for authentic Afghan products — built with Laravel 11, MySQL, and Tailwind CSS.**
 
 This is the modern rebuild of [Tajer.af](https://www.facebook.com/Tajer.af/), my original e-commerce platform that I founded and ran in Kabul, Afghanistan from 2017 to 2022 before displacement. This v2 reconstruction demonstrates my full-stack engineering capabilities using a current technology stack.
