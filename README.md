@@ -160,7 +160,7 @@ Log in as **admin** to access the `/admin` dashboard.
 
 ## 📁 Project Structure
 
-tajer-af-v2/
+"tajer-af-v2/
 ├── app/
 │   ├── Http/
 │   │   ├── Controllers/
@@ -192,7 +192,7 @@ tajer-af-v2/
 │       └── layout.blade.php     # Master layout
 └── routes/
 ├── web.php                  # All application routes
-└── auth.php                 # Breeze auth routes
+└── auth.php                 # Breeze auth routes"
 
 ---
 
@@ -234,13 +234,12 @@ This v2 reconstruction was built in 2026 as a portfolio project to demonstrate m
 
 ## 👨‍💻 About the Developer
 
-**Zaker Hussain Rasooli** — Full-Stack Developer with 8+ years of experience building web applications, currently pursuing a Master of Artificial Intelligence at Asia Pacific University, Malaysia.
+**Zaker Hussain Rasooli** — Full-Stack Developer with 8+ years of experience building web applications.
 
 - 🌐 [LinkedIn](https://www.linkedin.com/in/zaker-rasooli94/)
 - 🐙 [GitHub](https://github.com/zrasooli94)
 - 📍 Kuala Lumpur, Malaysia (open to relocation to Australia)
 
-I'm currently seeking **Full-Stack Developer** and **Software Engineer** roles in Australia, particularly through the Skilled Refugee Labour Agreement Pilot via Talent Beyond Boundaries.
 
 ---
 
