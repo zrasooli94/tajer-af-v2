@@ -46,7 +46,23 @@
         <span class="absolute -top-2 -right-3 bg-tajer-red text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">{{ $cartCount }}</span>
     @endif
 </a>
-                    <a href="#" class="btn-primary text-sm">Sign in</a>
+                    @auth
+    <div class="flex items-center space-x-3">
+        <span class="text-sm text-gray-700">Hi, <strong>{{ Auth::user()->name }}</strong></span>
+        @if(Auth::user()->is_admin)
+            <span class="bg-tajer-gold text-white text-xs px-2 py-1 rounded-full">ADMIN</span>
+        @endif
+        <form method="POST" action="{{ route('logout') }}" class="inline">
+            @csrf
+            <button type="submit" class="text-sm text-tajer-red hover:underline">
+                Logout
+            </button>
+        </form>
+    </div>
+@else
+    <a href="{{ route('login') }}" class="text-gray-700 hover:text-tajer-green font-medium">Sign in</a>
+    <a href="{{ route('register') }}" class="btn-primary text-sm">Register</a>
+@endauth
                 </nav>
             </div>
         </div>
