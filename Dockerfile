@@ -54,6 +54,8 @@ COPY . .
 
 # Build frontend assets (Vite -> public/build)
 RUN npm run build
+# Verify build output exists
+RUN ls -la /app/public/build && cat /app/public/build/manifest.json | head -20
 
 # Run composer scripts now that all files are present
 RUN composer dump-autoload --optimize
